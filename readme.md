@@ -3,7 +3,7 @@
 ## Lab 1
 
 ### App Description
-`TODO://` Add app description
+`TODO://` Tap Flashcard question to reveal the answer
 
 ### App Walk-though
 
