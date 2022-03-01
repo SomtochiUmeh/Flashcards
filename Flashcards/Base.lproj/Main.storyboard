@@ -46,22 +46,31 @@
                                 </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUB-oL-GQs">
-                                <rect key="frame" x="100" y="555" width="214" height="43"/>
+                                <rect key="frame" x="86" y="500" width="243" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="February 26th"/>
+                                <connections>
+                                    <action selector="tapOptn1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qwy-cd-3Ct"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uO3-Yq-6UM">
-                                <rect key="frame" x="100" y="741" width="214" height="43"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OfQ-Sq-ESe">
+                                <rect key="frame" x="86" y="711" width="243" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="February 28th"/>
+                                <connections>
+                                    <action selector="tapOptn3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KET-x0-zPg"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIr-Rz-QYf">
-                                <rect key="frame" x="100" y="651" width="214" height="43"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgy-XO-7cL">
+                                <rect key="frame" x="86" y="609" width="243" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="February 27th"/>
+                                <connections>
+                                    <action selector="tapOptn2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Swg-8P-jeM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -69,6 +78,9 @@
                     </view>
                     <connections>
                         <outlet property="backLabel" destination="j6t-Jc-JIq" id="YP6-XX-5bZ"/>
+                        <outlet property="btnOne" destination="BUB-oL-GQs" id="s3b-qG-9tD"/>
+                        <outlet property="btnThree" destination="OfQ-Sq-ESe" id="hh0-FP-lno"/>
+                        <outlet property="btnTwo" destination="xgy-XO-7cL" id="5KV-7t-UG2"/>
                         <outlet property="card" destination="PTn-S0-EIA" id="2uG-Ef-BD1"/>
                         <outlet property="frontLabel" destination="gyO-Da-ZTF" id="5gt-Dq-sU5"/>
                     </connections>
