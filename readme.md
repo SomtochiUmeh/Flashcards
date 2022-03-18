@@ -7,8 +7,6 @@ Add custom questions to flashcards, and click flashcard to reveal the question's
 
 <img src="lab2.gif" width=200><br>
 
-`TODO://` In the User stories section below, add an `x` between the `-[ ]` like this `- [x]` for any user story you complete. (☝️ Remove this paragraph after after checking off user stories)
-
 ## Required
 - [x] User can open the creation screen
 - [x] User can cancel out of the creation screen
