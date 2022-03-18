@@ -68,9 +68,13 @@ class ViewController: UIViewController {
         btnThree.isHidden = true
     }
     
-    func updateFlashcard(question: String, answer: String) {
+    func updateFlashcard(question: String, answer: String, extraAnswerOne: String?, extraAnswerTwo: String?) {
         frontLabel.text = question
         backLabel.text = answer
+        
+        btnOne.setTitle(extraAnswerOne, for: .normal)
+        btnTwo.setTitle(answer, for: .normal)
+        btnThree.setTitle(extraAnswerTwo, for: .normal)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -82,6 +86,14 @@ class ViewController: UIViewController {
         
         // set flashcardsController property to self
         creationController.flashcardsController = self
+        
+        // move info from view controller to creationController for editing
+        if segue.identifier == "EditSegue" {
+            creationController.initialQuestion = frontLabel.text
+            creationController.initialAnswer = backLabel.text
+            creationController.initialOptOne = btnOne.currentTitle
+            creationController.initialOptTwo = btnThree.currentTitle
+        }
     }
     
 }
