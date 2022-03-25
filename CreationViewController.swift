@@ -22,6 +22,9 @@ class CreationViewController: UIViewController {
     var initialOptOne: String?
     var initialOptTwo: String?
     
+    // see if card exists (for editing)
+    var isExisting = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -53,9 +56,12 @@ class CreationViewController: UIViewController {
             alert.addAction(okAction)
             
         } else {
-            
+            // check if card exists ie. editing a card
+            if initialQuestion != nil {
+                isExisting = true
+            }
             // Call function to update flashcard
-            flashcardsController.updateFlashcard(question: questionText!, answer: answerText!, extraAnswerOne: optOne, extraAnswerTwo: optTwo)
+            flashcardsController.updateFlashcard(question: questionText!, answer: answerText!, extraAnswerOne: optOne!, extraAnswerTwo: optTwo!, isExisting: isExisting)
             // Dismiss
             dismiss(animated: true)
             

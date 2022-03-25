@@ -1,18 +1,17 @@
-## Lab 2
+## Lab 3
 
-### Flashcards iOS App
-Add custom questions to flashcards, and click flashcard to reveal the question's answer
+### App Description
+Browse through multiple flashcards and save created flashcards
 
 ### App Walk-though
 
-<img src="lab2.gif" width=200><br>
+<img src="lab3.gif" width=200><br>
 
 ## Required
-- [x] User can open the creation screen
-- [x] User can cancel out of the creation screen
-- [x] User can enter a new question and answer in the creation screen to then show it on the flashcard
+- [x] User can browse through multiple flashcards
+- [x] User can re-open the app and see previously created flashcards
 - [x] Push code to GitHub
 ## Optional
-- [x] User gets an error if they try to create a new flashcard with no question or answer
+- [x] User can delete a flashcard
 - [x] User can edit existing flashcard
-- [x] User can add multiple choice answers in the creation screen## Flashcards App
+- [ ] User can store multiple choice questions
