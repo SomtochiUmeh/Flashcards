@@ -78,12 +78,66 @@ class ViewController: UIViewController {
     }
 
     @IBAction func didTapOnFlashcard(_ sender: Any) {
-        if frontLabel.isHidden{
-        frontLabel.isHidden = false
-        } else {
-            frontLabel.isHidden = true
+        flipFlashcard()
+    }
+    
+    func flipFlashcard() {
+        UIView.transition(with: card, duration: 0.3, options: .transitionFlipFromRight, animations: {
+            // code from didTapOnFlashcard
+            if self.frontLabel.isHidden{
+                self.frontLabel.isHidden = false
+            } else {
+                self.frontLabel.isHidden = true
+            }
+        })
+    }
+    
+    func animateCardOut() {
+        UIView.animate(withDuration: 0.3) {
+            self.card.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0.0)
+        } completion: { finished in
+            
+            // update labels
+            self.updateLabels()
+            
+            // run other animation
+            self.animateCardIn()
         }
     }
+    
+    func animateCardIn() {
+        // start on the right side of the screen, unanimated
+        card.transform = CGAffineTransform.identity.translatedBy(x: 300.0, y: 0.0)
+        
+        // animate card going back to its original position
+        UIView.animate(withDuration: 0.3) {
+            self.card.transform = CGAffineTransform.identity
+            }
+        }
+    
+    func animateCardOutp() {
+        UIView.animate(withDuration: 0.3) {
+            self.card.transform = CGAffineTransform.identity.translatedBy(x: 300.0, y: 0.0)
+        } completion: { finished in
+            
+            // update labels
+            self.updateLabels()
+            
+            // run other animation
+            self.animateCardInp()
+        }
+    }
+    
+    func animateCardInp() {
+        // start on the right side of the screen, unanimated
+        card.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0.0)
+        
+        // animate card going back to its original position
+        UIView.animate(withDuration: 0.3) {
+            self.card.transform = CGAffineTransform.identity
+            }
+        }
+
     
     @IBAction func tapOptn1(_ sender: Any) {
         btnOne.isHidden = true
@@ -98,8 +152,8 @@ class ViewController: UIViewController {
     @IBAction func didTapOnPrev(_ sender: Any) {
         // decrease current index
         currentIndex = currentIndex - 1
-        // update labels
-        updateLabels()
+//        // update labels
+//        updateLabels()
         // update buttons
         updateNextPrevButtons()
         
@@ -107,13 +161,14 @@ class ViewController: UIViewController {
         if frontLabel.isHidden{
         frontLabel.isHidden = false
         }
+        
+        // animate
+        animateCardOutp()
     }
     
     @IBAction func didTapOnNext(_ sender: Any) {
         // increase current index
         currentIndex = currentIndex + 1
-        // update labels
-        updateLabels()
         // update buttons
         updateNextPrevButtons()
         
@@ -121,6 +176,9 @@ class ViewController: UIViewController {
         if frontLabel.isHidden{
         frontLabel.isHidden = false
         }
+        
+        // animate
+        animateCardOut()
     }
     
     @IBAction func didTapOnDelete(_ sender: Any) {
